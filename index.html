@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Muhammad Kashan - Entry-Level Full Stack Web Developer | Karachi, Pakistan | Responsive websites, CRUD, Authentication, Dashboards">
+    <meta name="keywords" content="Full Stack Developer, Web Developer, Muhammad Kashan, Karachi, Pakistan, PHP, JavaScript, Bootstrap, ADSE, BBIT">
+    <meta name="author" content="Muhammad Kashan">
+    <title>Muhammad Kashan | Full Stack Web Developer</title>
+
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Google Fonts: Poppins (headings), Inter (body) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    <!-- AOS - Animate On Scroll -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- ========== NAVBAR (Glassmorphism, Sticky) ========== -->
+    <nav class="navbar navbar-expand-lg fixed-top" id="mainNavbar">
+        <div class="container">
+            <a class="navbar-brand" href="#home">KASHAN<span class="brand-dot">.DEV</span></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto gap-lg-2">
+                    <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ========== HERO (Left: Text + CTAs | Right: Profile Image) ========== -->
+    <section id="home" class="hero-section min-vh-100 d-flex align-items-center position-relative overflow-hidden">
+        <div class="hero-bg"></div>
+        <div class="container position-relative z-2">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-7" data-aos="fade-right">
+                    <p class="hero-greeting mb-2">Hi, I'm</p>
+                    <h1 class="hero-title mb-3">
+                        <span id="typed-name"></span><span class="typed-cursor">|</span>
+                    </h1>
+                    <h2 class="hero-subtitle mb-3">
+                        <span id="typed-title"></span>
+                    </h2>
+                    <p class="hero-tech-stack mb-4">
+                        HTML | CSS | JavaScript | Bootstrap | PHP | MySQL
+                    </p>
+                    <div class="hero-cta d-flex flex-wrap gap-3">
+                        <a href="#contact" class="btn btn-primary btn-cta px-4 py-3">
+                            <i class="fas fa-download me-2"></i>Download CV
+                        </a>
+                        <a href="#contact" class="btn btn-outline-primary btn-cta-outline px-4 py-3">
+                            <i class="fas fa-paper-plane me-2"></i>Hire Me
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-5 text-center" data-aos="fade-left" data-aos-delay="200">
+                    <div class="hero-image-wrapper">
+                        <div class="hero-image-placeholder">
+                            <img src="img2.jpg" alt="Muhammad Kashan">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <a href="#about" class="scroll-down" aria-label="Scroll to About"><i class="fas fa-chevron-down"></i></a>
+        </div>
+    </section>
+
+    <!-- ========== ABOUT ========== -->
+    <section id="about" class="section-py">
+        <div class="container">
+            <h2 class="section-title text-center mb-5" data-aos="fade-up">About <span class="text-gradient">Me</span></h2>
+            <div class="row align-items-center g-5">
+                <div class="col-lg-5 text-center" data-aos="fade-right">
+                    <div class="about-image-wrapper mx-auto mb-4">
+                        <div class="about-image-placeholder">
+                            <img src="img1.jpg" alt="Muhammad Kashan">
+                        </div>
+                    </div>
+                    <div class="about-counters row g-3 justify-content-center">
+                        <div class="col-4">
+                            <div class="counter-card">
+                                <span class="counter" data-count="15">0</span>
+                                <small>Projects</small>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="counter-card">
+                                <span class="counter" data-count="12">0</span>
+                                <small>Skills</small>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="counter-card">
+                                <span class="counter" data-count="1">0</span>
+                                <small>Experience</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-7" data-aos="fade-left">
+                    <h3 class="about-heading mb-4">Entry-Level Full Stack Web Developer</h3>
+                    <p class="about-text mb-3">
+                        I'm <strong>Muhammad Kashan</strong>, a motivated and hardworking Entry-Level Full Stack Web Developer with strong hands-on experience in frontend and backend development. I have worked on responsive websites, CRUD systems, authentication systems, dashboards, and basic SEO projects.
+                    </p>
+                    <p class="about-text mb-3">
+                        I'm currently studying <strong>ADSE (Advanced Diploma in Software Engineering)</strong> at Aptech Computer Education (3rd Semester – In Progress) and <strong>BBIT (Bachelor of Business & Information Technology)</strong> at Virtual University of Pakistan (In Progress).
+                    </p>
+                    <p class="about-text mb-3">
+                        In addition to development skills, I have <strong>1 year of professional experience</strong> as an Operations Assistant in the Port & Logistics industry, where I gained strong communication, teamwork, documentation, and time-management skills.
+                    </p>
+                    <p class="about-text mb-3">
+                        My goal is to secure an entry-level web developer role or internship and grow into a professional full-stack developer.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== SKILLS ========== -->
+    <section id="skills" class="section-py section-alt">
+        <div class="container">
+            <h2 class="section-title text-center mb-5" data-aos="fade-up">My <span class="text-gradient">Skills</span></h2>
+
+            <div class="skills-category mb-5" data-aos="fade-up">
+                <h4 class="skills-category-title"><i class="fas fa-palette me-2"></i>Frontend</h4>
+                <div class="row g-4">
+                    <div class="col-6 col-md-4 col-lg-3">
+                        <div class="skill-card">
+                            <i class="fab fa-html5 skill-icon"></i>
+                            <h5>HTML</h5>
+                            <div class="progress"><div class="progress-bar" role="progressbar" data-width="90" style="width: 0%"></div></div>
+                            <span class="skill-percent">0%</span>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-3">
+                        <div class="skill-card">
+                            <i class="fab fa-css3-alt skill-icon"></i>
+                            <h5>CSS</h5>
+                            <div class="progress"><div class="progress-bar" role="progressbar" data-width="85" style="width: 0%"></div></div>
+                            <span class="skill-percent">0%</span>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-3">
+                        <div class="skill-card">
+                            <i class="fab fa-js skill-icon"></i>
+                            <h5>JavaScript</h5>
+                            <div class="progress"><div class="progress-bar" role="progressbar" data-width="80" style="width: 0%"></div></div>
+                            <span class="skill-percent">0%</span>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-3">
+                        <div class="skill-card">
+                            <i class="fab fa-bootstrap skill-icon"></i>
+                            <h5>Bootstrap</h5>
+                            <div class="progress"><div class="progress-bar" role="progressbar" data-width="88" style="width: 0%"></div></div>
+                            <span class="skill-percent">0%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="skills-category mb-5" data-aos="fade-up">
+                <h4 class="skills-category-title"><i class="fas fa-server me-2"></i>Backend</h4>
+                <div class="row g-4">
+                    <div class="col-6 col-md-4 col-lg-3">
+                        <div class="skill-card">
+                            <i class="fab fa-php skill-icon"></i>
+                            <h5>PHP</h5>
+                            <div class="progress"><div class="progress-bar" role="progressbar" data-width="82" style="width: 0%"></div></div>
+                            <span class="skill-percent">0%</span>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-3">
+                        <div class="skill-card">
+                            <i class="fas fa-database skill-icon"></i>
+                            <h5>MySQL</h5>
+                            <div class="progress"><div class="progress-bar" role="progressbar" data-width="85" style="width: 0%"></div></div>
+                            <span class="skill-percent">0%</span>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-3">
+                        <div class="skill-card">
+                            <i class="fab fa-laravel skill-icon"></i>
+                            <h5>Laravel (Basic)</h5>
+                            <div class="progress"><div class="progress-bar" role="progressbar" data-width="55" style="width: 0%"></div></div>
+                            <span class="skill-percent">0%</span>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-3">
+                        <div class="skill-card">
+                            <i class="fas fa-database skill-icon"></i>
+                            <h5>SQL Server</h5>
+                            <div class="progress"><div class="progress-bar" role="progressbar" data-width="70" style="width: 0%"></div></div>
+                            <span class="skill-percent">0%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="skills-category mb-5" data-aos="fade-up">
+                <h4 class="skills-category-title"><i class="fas fa-tools me-2"></i>CMS & Tools</h4>
+                <div class="row g-4">
+                    <div class="col-6 col-md-4 col-lg-3">
+                        <div class="skill-card">
+                            <i class="fab fa-wordpress skill-icon"></i>
+                            <h5>WordPress</h5>
+                            <div class="progress"><div class="progress-bar" role="progressbar" data-width="75" style="width: 0%"></div></div>
+                            <span class="skill-percent">0%</span>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-3">
+                        <div class="skill-card">
+                            <i class="fas fa-paint-brush skill-icon"></i>
+                            <h5>Canva</h5>
+                            <div class="progress"><div class="progress-bar" role="progressbar" data-width="80" style="width: 0%"></div></div>
+                            <span class="skill-percent">0%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="skills-category" data-aos="fade-up">
+                <h4 class="skills-category-title"><i class="fas fa-chart-line me-2"></i>SEO</h4>
+                <div class="row g-4">
+                    <div class="col-6 col-md-4 col-lg-3">
+                        <div class="skill-card">
+                            <i class="fas fa-edit skill-icon"></i>
+                            <h5>Blogging</h5>
+                            <div class="progress"><div class="progress-bar" role="progressbar" data-width="78" style="width: 0%"></div></div>
+                            <span class="skill-percent">0%</span>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-3">
+                        <div class="skill-card">
+                            <i class="fas fa-search skill-icon"></i>
+                            <h5>Keyword Research</h5>
+                            <div class="progress"><div class="progress-bar" role="progressbar" data-width="72" style="width: 0%"></div></div>
+                            <span class="skill-percent">0%</span>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-3">
+                        <div class="skill-card">
+                            <i class="fas fa-link skill-icon"></i>
+                            <h5>Backlinks</h5>
+                            <div class="progress"><div class="progress-bar" role="progressbar" data-width="68" style="width: 0%"></div></div>
+                            <span class="skill-percent">0%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== PROJECTS (with image placeholder) ========== -->
+    <section id="projects" class="section-py">
+        <div class="container">
+            <h2 class="section-title text-center mb-5" data-aos="fade-up">My <span class="text-gradient">Projects</span></h2>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="0">
+                    <div class="project-card">
+                        <div class="project-image-placeholder">
+                            <i class="fas fa-database"></i>
+                        </div>
+                        <div class="project-card-body">
+                            <h5>CRUD Web Application</h5>
+                            <p>Full-stack CRUD application with PHP & MySQL for data management.</p>
+                            <div class="project-badges">
+                                <span class="badge">PHP</span>
+                                <span class="badge">MySQL</span>
+                                <span class="badge">Bootstrap</span>
+                            </div>
+                            <div class="project-links mt-3">
+                                <a href="#" class="btn btn-sm btn-demo"><i class="fas fa-external-link-alt me-1"></i>Demo</a>
+                                <a href="#" class="btn btn-sm btn-github"><i class="fab fa-github me-1"></i>GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="project-card">
+                        <div class="project-image-placeholder">
+                            <i class="fas fa-lock"></i>
+                        </div>
+                        <div class="project-card-body">
+                            <h5>Authentication System</h5>
+                            <p>Login, register, session management with secure password hashing.</p>
+                            <div class="project-badges">
+                                <span class="badge">PHP</span>
+                                <span class="badge">MySQL</span>
+                                <span class="badge">JavaScript</span>
+                            </div>
+                            <div class="project-links mt-3">
+                                <a href="#" class="btn btn-sm btn-demo"><i class="fas fa-external-link-alt me-1"></i>Demo</a>
+                                <a href="#" class="btn btn-sm btn-github"><i class="fab fa-github me-1"></i>GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="project-card">
+                        <div class="project-image-placeholder">
+                            <i class="fas fa-tachometer-alt"></i>
+                        </div>
+                        <div class="project-card-body">
+                            <h5>Admin Dashboard</h5>
+                            <p>Responsive admin panel with charts, tables and user management.</p>
+                            <div class="project-badges">
+                                <span class="badge">Bootstrap</span>
+                                <span class="badge">PHP</span>
+                                <span class="badge">MySQL</span>
+                            </div>
+                            <div class="project-links mt-3">
+                                <a href="#" class="btn btn-sm btn-demo"><i class="fas fa-external-link-alt me-1"></i>Demo</a>
+                                <a href="#" class="btn btn-sm btn-github"><i class="fab fa-github me-1"></i>GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="0">
+                    <div class="project-card">
+                        <div class="project-image-placeholder">
+                            <i class="fas fa-blog"></i>
+                        </div>
+                        <div class="project-card-body">
+                            <h5>Blog Website with SEO</h5>
+                            <p>Content-focused blog with meta tags, sitemaps and SEO best practices.</p>
+                            <div class="project-badges">
+                                <span class="badge">PHP</span>
+                                <span class="badge">WordPress</span>
+                                <span class="badge">SEO</span>
+                            </div>
+                            <div class="project-links mt-3">
+                                <a href="#" class="btn btn-sm btn-demo"><i class="fas fa-external-link-alt me-1"></i>Demo</a>
+                                <a href="#" class="btn btn-sm btn-github"><i class="fab fa-github me-1"></i>GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="project-card">
+                        <div class="project-image-placeholder">
+                            <i class="fas fa-briefcase"></i>
+                        </div>
+                        <div class="project-card-body">
+                            <h5>Responsive Business Website</h5>
+                            <p>Modern, mobile-first business landing page with contact forms.</p>
+                            <div class="project-badges">
+                                <span class="badge">HTML</span>
+                                <span class="badge">CSS</span>
+                                <span class="badge">Bootstrap</span>
+                            </div>
+                            <div class="project-links mt-3">
+                                <a href="#" class="btn btn-sm btn-demo"><i class="fas fa-external-link-alt me-1"></i>Demo</a>
+                                <a href="#" class="btn btn-sm btn-github"><i class="fab fa-github me-1"></i>GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== EXPERIENCE (Timeline) ========== -->
+    <section id="experience" class="section-py section-alt">
+        <div class="container">
+            <h2 class="section-title text-center mb-5" data-aos="fade-up">Work <span class="text-gradient">Experience</span></h2>
+            <div class="timeline" id="experienceTimeline">
+                <div class="timeline-line" aria-hidden="true"></div>
+                <div class="timeline-item" data-aos="fade-right">
+                    <div class="timeline-marker"><i class="fas fa-briefcase"></i></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">Oct 2024 – Nov 2025</span>
+                        <h4>Operations Assistant</h4>
+                        <h5 class="timeline-subtitle">Port & Logistics Industry</h5>
+                        <ul class="timeline-list">
+                            <li>Daily operational task handling</li>
+                            <li>Documentation and reporting</li>
+                            <li>Team coordination</li>
+                            <li>Improved communication and time management</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item" data-aos="fade-left">
+                    <div class="timeline-marker"><i class="fas fa-code"></i></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">2025 – Present</span>
+                        <h4>Freelance / Training Web Developer</h4>
+                        <h5 class="timeline-subtitle">Self-employed</h5>
+                        <ul class="timeline-list">
+                            <li>Built responsive websites</li>
+                            <li>Developed CRUD applications</li>
+                            <li>Worked on authentication systems</li>
+                            <li>Created dashboards</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== EDUCATION (Timeline - same style as Experience) ========== -->
+    <section id="education" class="section-py">
+        <div class="container">
+            <h2 class="section-title text-center mb-5" data-aos="fade-up">Edu<span class="text-gradient">cation</span></h2>
+            <div class="timeline" id="educationTimeline">
+                <div class="timeline-line" aria-hidden="true"></div>
+                <div class="timeline-item" data-aos="fade-right">
+                    <div class="timeline-marker"><i class="fas fa-school"></i></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">2022</span>
+                        <h4>Matric</h4>
+                        <h5 class="timeline-subtitle">Hamza Public School</h5>
+                    </div>
+                </div>
+                <div class="timeline-item" data-aos="fade-left">
+                    <div class="timeline-marker"><i class="fas fa-graduation-cap"></i></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">2022 – 2024</span>
+                        <h4>Intermediate</h4>
+                        <h5 class="timeline-subtitle">The Pinnacle College</h5>
+                    </div>
+                </div>
+                <div class="timeline-item" data-aos="fade-right">
+                    <div class="timeline-marker"><i class="fas fa-laptop-code"></i></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">In Progress</span>
+                        <h4>ADSE (Advanced Diploma in Software Engineering)</h4>
+                        <h5 class="timeline-subtitle">Aptech Computer Education</h5>
+                        <p class="timeline-badge"><span class="badge">3rd Semester</span></p>
+                    </div>
+                </div>
+                <div class="timeline-item" data-aos="fade-left">
+                    <div class="timeline-marker"><i class="fas fa-university"></i></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">In Progress</span>
+                        <h4>BBIT (Bachelor of Business & Information Technology)</h4>
+                        <h5 class="timeline-subtitle">Virtual University of Pakistan</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== CONTACT ========== -->
+    <section id="contact" class="section-py section-alt">
+        <div class="container">
+            <h2 class="section-title text-center mb-5" data-aos="fade-up">Get In <span class="text-gradient">Touch</span></h2>
+            <div class="row g-5">
+                <div class="col-lg-4" data-aos="fade-right">
+                    <div class="contact-info-card mb-4">
+                        <i class="fas fa-envelope"></i>
+                        <h5>Email</h5>
+                        <a href="mailto:kashanmalikhabib142@gmail.com">kashanmalikhabib142@gmail.com</a>
+                    </div>
+                    <div class="contact-info-card">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <h5>Location</h5>
+                        <p class="mb-0">Karachi, Pakistan</p>
+                    </div>
+                    <div class="social-links mt-4">
+                        <a href="#" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-link" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="#" class="social-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-8" data-aos="fade-left">
+                    <form id="contactForm" class="contact-form">
+                        <div class="form-status" id="formStatus" aria-live="polite"></div>
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <label for="contactName" class="form-label">Name</label>
+                                <input type="text" class="form-control" id="contactName" name="name" placeholder="Your name" required>
+                                <span class="invalid-feedback" id="nameError"></span>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="contactEmail" class="form-label">Email</label>
+                                <input type="email" class="form-control" id="contactEmail" name="email" placeholder="your@email.com" required>
+                                <span class="invalid-feedback" id="emailError"></span>
+                            </div>
+                            <div class="col-12">
+                                <label for="contactSubject" class="form-label">Subject</label>
+                                <input type="text" class="form-control" id="contactSubject" name="subject" placeholder="Subject">
+                            </div>
+                            <div class="col-12">
+                                <label for="contactMessage" class="form-label">Message</label>
+                                <textarea class="form-control" id="contactMessage" name="message" rows="5" placeholder="Your message..." required></textarea>
+                                <span class="invalid-feedback" id="messageError"></span>
+                            </div>
+                            <div class="col-12">
+                                <button type="submit" class="btn btn-primary btn-cta px-4 py-3" id="submitBtn">
+                                    <i class="fas fa-paper-plane me-2"></i><span class="btn-text">Send Message</span>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content d-flex flex-column flex-md-row justify-content-between align-items-center gap-3">
+                <p class="mb-0">© 2026 Muhammad Kashan</p>
+                <div class="footer-social">
+                    <a href="#" class="footer-social-link" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="footer-social-link" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="#" class="footer-social-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="footer-social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                </div>
+                <p class="mb-0 footer-built">Built with <i class="fas fa-heart"></i> using HTML, CSS & JavaScript</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
